@@ -60,6 +60,7 @@
     <h1>22 - 26 November 2021</h1>
 
 Two or three sessions every day. Each session 2-3h long, as required. BST time.
+<br> </br>
 <!-- ######################################################################### -->
 
 <div class="tab">
@@ -232,6 +233,12 @@ function openDay(evt, dayName) {
   }
   document.getElementById(dayName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+window.onload = function() {
+<!--trigger Monday tab-->
+    document.getElementsByClassName("tablinks")[0].click();
+
 }
 </script>
 
