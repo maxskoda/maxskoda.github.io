@@ -2,98 +2,238 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ISIS Virtual Neutron Reflectometry School</title>
+
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th, td {
+        padding-left: 30px;
+    }
+    body {font-family: Arial;}
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    </style>
 </head>
 <body leftmargin="20%" rightmargin="20%">
 
 <h1>ISIS Virtual Neutron Reflectometry School</h1>
     <h1>22 - 26 November 2021</h1>
 
-Two sessions every day. Each session 2-3h long, as required.
-<!-- ######################################################################### -->
-<h2> Day 1 (22nd) </h2>
-<h4>Morning (09:00)</h4>
-<h3>Introduction (Max Skoda/Luke Clifton)</h3>
-<h3>Lecture 1: Reflectometry theory I (John Webster/Max Skoda?)</h3>
-<ul>
-  <li>Scattering theory</li>
-  <li>Optical matrix</li>
-  <li>Examples</li>
-</ul>
-<h3>Practical 1: Reflectometry demo with play along (NIST website) (John Webster et al.)</h3>
-
-<h4>Afternoon (13:00)</h4>
-<h3>Lecture 2: Data reduction (Max Skoda)</h3>
-<ul>
-  <li>Mantid introduction</li>
-  <li>Basic beamline setup</li>
-  <li>Time-of-flight</li>
-</ul>
-<h3>Practical 2: Data reduction in Mantid (Max Skoda et al.)</h3>
-
+Two or three sessions every day. Each session 2-3h long, as required. BST time.
 <!-- ######################################################################### -->
 
-<h2> Day 2 (23rd) </h2>
-<h4>Morning (09:00)</h4>
-EITHER:
-<h3>Lecture 3: Reflectometry theory II (John Webster/Max Skoda/Luke Clifton?)</h3>
-<ul>
-  <li>Dynamic range and resolution</li>
-  <li>Isotopic Contrast</li>
-  <li>Examples</li>
-</ul>
-OR / OR staggered:
-<h3>Lecture 3: PNR theory (Christy Kinane/Andrew Caruana/Jos Cooper)</h3>
-<ul>
-  <li>Dynamic range and resolution</li>
-  <li>Isotopic Contrast</li>
-  <li>Examples</li>
-</ul>
-<h3>Practical 3: (IDAaaS or Colab) Refl1D demo with play along (Andrew Caruana/Christy Kinane)</h3>
+<div class="tab">
+  <button class="tablinks" onclick="openDay(event, 'Monday')">Monday</button>
+  <button class="tablinks" onclick="openDay(event, 'Tuesday')">Tuesday</button>
+  <button class="tablinks" onclick="openDay(event, 'Wednesday')">Wednesday</button>
+  <button class="tablinks" onclick="openDay(event, 'Thursday')">Thursday</button>
+</div>
 
+<div id="Monday" class="tabcontent">
+<table style="width:100%">
+    <tr><td><h2> Day 1 (Monday, 22nd) </h2></td></tr>
+    <tr><td>
+        <h4>Morning (09:00 - 11:00)</h4>
+        <h3>Introduction (Max Skoda/Luke Clifton)</h3>
+        <h3>Lecture 1: Reflectometry theory I (John Webster/Max Skoda?)</h3>
+        <ul>
+          <li>Scattering theory</li>
+          <li>Optical matrix</li>
+          <li>Examples</li>
+        </ul>
+        <h3>Practical 1: Reflectometry demo with play along (NIST website) (John Webster et al.)</h3>
 
-<h4>Afternoon (13:00)</h4>
-<h3>Lecture 4: Fitting and error analysis theory (Arwel Hughes/Max Skoda/Luke Clifton?)</h3>
-This may need more than one session...
-<ul>
-  <li>Slab models</li>
-  <li>Model parametrisation (custom models)</li>
-  <li>Fitting pitfalls</li>
-  <li>Bootsptrap analysis</li>
-  <li>Bayesian analysis</li>
-  <li>Model selection</li>
-</ul>
+    </td></tr>
 
-<h3>Practical 4: (IDAaaS) RasCAL demo with play along (Arwel Hughes/Luke Clifton)</h3>
+    <tr><td>
+        <h4>Afternoon (13:00 - 15:00)</h4>
+        <h3>Lecture 2: Reflectometry theory II (John Webster/Max Skoda/Luke Clifton?)</h3>
+        <ul>
+          <li>Dynamic range and resolution</li>
+          <li>Isotopic Contrast</li>
+          <li>Examples</li>
+        </ul>
 
-<!-- ######################################################################### -->
+        <h3>Practical 2: Reflectometry demo with play along (NIST website or RasCAL or sth else) (John Webster et al.)</h3>
+    </td></tr>
+    <tr>
+        <td>
+            <h4>Afternoon (15:00 - 16:00)</h4>
+            <h3>Lecture 3: PNR theory (Christy Kinane/Andrew Caruana/Jos Cooper)</h3>
+            <ul>
+              <li>Magnetic scattering (PNR/PA)</li>
+              <li>Measurement strategies</li>
+              <li>Examples</li>
+            </ul>
+            <h3>Practical 3: PNR demo with play along (NIST website) (Andrew Caruana/Christy Kinane)</h3>
+        </td>
+    </tr>
 
-<h2> Day 3 (24th) </h2>
-<h4>Morning (09:00)</h4>
-<h3>Lecture 5: Introduction to RefNX (Andrew Nelson/Jos Cooper/Max Skoda)</h3>
-<ul>
-  <li>Model defintion</li>
-  <li>Jupyter/Colab/Python script/GUI</li>
-  <li>Special features (mixed are models, inequality constraints etc)</li>
-  <li>Error analysis</li>
-</ul>
-<h3>Practical 5: RefNX demo with play along (Andrew Nelson/Jos Cooper/Max Skoda)</h3>
-
-<h4>Afternoon (13:00)</h4>
-<h3>Lecture 6: Introduction to Refl1D (Andrew Caruana/Jos Cooper/Christy Kinane)</h3>
-<ul>
-  <li>Jupyter/Colab/Python script/GUI</li>
-  <li>Model defintion</li>
-  <li>Special features (mixed are models, inequality constraints etc)</li>
-  <li>Error analysis</li>
-</ul>
-<h3>Practical 6: Refl1D demo with play along (Andrew Nelson/Jos Cooper/Max Skoda)</h3>
+</table>
+</div>
 
 <!-- ######################################################################### -->
+<div id="Tuesday" class="tabcontent">
+<table style="width:100%">
+    <tr><td><h2> Day 2 (Tuesday, 23rd) </h2></td></tr>
+    <tr><td>
+        <h4>Morning (09:00 - 11:00)</h4>
+             <h3>Lecture 4: Data reduction I (Max Skoda)</h3>
+            <ul>
+              <li>Mantid introduction</li>
+              <li>Basic beamline setup (virtual beamline tour??)</li>
+              <li>Time-Of-Flight</li>
+            </ul>
+            <h3>Practical 4: Data reduction in Mantid (Max Skoda et al.)</h3>
+    </td></tr>
+    <tr><td>
+        <h4>Morning (11:00 - 12:00)</h4>
+             <h3>Lecture 5: Data reduction II (Andrew Caruana/Christy Kinane)</h3>
+            <ul>
+              <li>Jupyter introduction</li>
+              <li>Examples</li>
+            </ul>
+            <h3>Practical 5: Data reduction in Jupyter (Andrew Caruana et al.)</h3>
+    </td></tr>
+    <tr><td>
+            <h4>Afternoon (13:00-16:00??)</h4>
+            <h3>Lecture 6: Fitting and error analysis theory (Arwel Hughes/Max Skoda/Luke Clifton?)</h3>
+            This may need more than one session...
+            <ul>
+              <li>Slab models</li>
+              <li>Model parametrisation (custom models)</li>
+              <li>Fitting pitfalls</li>
+              <li>Bootsptrap analysis</li>
+              <li>Bayesian analysis</li>
+              <li>Model selection</li>
+            </ul>
 
-<h2> Day 4 (25th) </h2>
-<h4>Morning (09:00)</h4>
-<h3>Practical 7: Participant own problems or practice examples (everyone)</h3>
+            <h3>Practical 6: (IDAaaS) RasCAL demo with play along (Arwel Hughes/Luke Clifton)</h3>
+    </td></tr>
+
+</table>
+</div>
+
+<!-- ######################################################################### -->
+<div id="Wednesday" class="tabcontent">
+<table style="width:100%">
+    <tr><td><h2> Day 3 (Wednesday, 24th) </h2></td></tr>
+    <tr><td>
+        <h4>Morning (09:00 - 11:00)</h4>
+        <h3>Lecture 7: Case study - Lipid Bilayers (Luke Clifton)</h3>
+            <ul>
+              <li>Introduction to RasCAL</li>
+              <li>Building a model</li>
+              <li>Custom models</li>
+              <li>Fitting strategies and pitfalls</li>
+              <li>Error analysis</li>
+            </ul>
+
+        <h3>Practical 7: RasCAL demo with play along (Luke Clifton/Steve Hall/Max Skoda)</h3>
+    </td></tr>
+
+    <tr><td>
+        <h4>Afternoon (13:00 - 15:00)</h4>
+            <h3>Lecture 8: Case study - Polarised Neutron Reflectometry (PNR)(Andrew Caruana/Jos Cooper/Christy Kinane)</h3>
+            <ul>
+              <li>Measurement strategies</li>
+              <li>Model definition</li>
+              <li>Measurables (polarisation, spin-flip scattering, spin asymmetry) </li>
+              <li>Error analysis</li>
+            </ul>
+            <h3>Practical 8: Refl1D demo with play along (Brian Maranville??/Andrew Caruana/Jos Cooper/Christy Kinane)</h3>
+
+    </td></tr>
+</table>
+</div>
+
+<!-- ######################################################################### -->
+<div id="Thursday" class="tabcontent">
+<table style="width:100%">
+    <tr><td><h2> Day 4 (Thursday, 25th) </h2></td></tr>
+    <tr><td>
+        <h4>Morning (09:00 - 11:00)</h4>
+            <h3>Lecture 9: Case study - Unusual systems (Max Skoda/Steve Hall/Becky Welbourn)</h3>
+            <ul>
+              <li>Introduction to RefNX (Andrew Nelson??)</li>
+              <li>Building a model</li>
+              <li>Custom models: mixed area, non-slab models ??</li>
+              <li>Fitting strategies and pitfalls</li>
+              <li>Error analysis</li>
+            </ul>
+
+        <h3>Practical 9: RefNX demo with play along (Max Skoda/Steve Hall/Andrew Nelson??)</h3>
+    </td></tr>
+
+    <tr><td>
+        <h4>Afternoon (13:00 - 16:00??)</h4>
+            <h3>Practical 10: Participant own problems or practice examples (everyone)</h3>
+            <ul>
+              <li>Breakout rooms by topic</li>
+            </ul>
+
+
+
+    </td></tr>
+</table>
+</div>
+
+
+<script>
+function openDay(evt, dayName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(dayName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
 </body>
 </html>
